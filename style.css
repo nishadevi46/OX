@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Dosis:wght@600&family=Lobster&family=Playball&family=Poppins:wght@400;500;600&family=Rubik+Gemstones&family=Rubik:wght@400;500;600;700&family=Ysabeau+Infant:wght@200;300&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+body{
+    background: #1F1D36;
+    color:  #EAEA7F;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container h1{
+    margin:20px 0 40px 0;
+   justify-content: center;
+   align-items: center;
+}
+.board{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(120px,1fr));
+}
+.cell{
+    border: 2px solid #FF78C4;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 60px;
+   font-weight: 600;
+   color: #943855;
+   height: 120px;
+   padding: 20px;
+   cursor: pointer;
+   
+}
+.cell:first-child, .cell:nth-child(2), .cell:nth-child(3){
+    border-top: none;
+}
+.cell:nth-child(3), .cell:nth-child(6), .cell:nth-child(9){
+    border-right: none;
+}
+.cell:nth-child(3n+1){
+    border-left: none;
+}
+.cell:nth-child(n+7){
+    border-bottom: none;
+}
+.gameplayer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.player{
+    margin-inline: 18px;
+    font-size: 24px;
+    font-weight: 600;
+}
+.restart{
+    border: none;
+    background:#FF78C4;
+    color:#F7E8F6;
+    font-size: 22px;
+    font-weight:700;
+    margin-block: 18px;
+    padding: 10px 30px;
+    border-radius:4px;
+    cursor:pointer;
+}
+.restart:hover{
+    background: #000;
+}
+@media screen and (max-width:550px){
+    .contrainer h1{
+        font-size:24px;
+    }
+    .board{
+        grid-template-columns: repeat(3,minmax(90px,1fr));
+    }
+    .cell{
+        height: 90px;
+        font-size: 50px;
+    }
+}
+.cell.disabled{
+background:black;
+}
+.bellring{
+    position:absolute;
+    top: 0;
+    background-color: #1F1D36;
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 80px;
+    font-weight: 600;
+    height: 40px;
+    display: none;
+  text-align: center;
+    
+}
