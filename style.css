@@ -23,6 +23,7 @@ body{
     margin:20px 0 40px 0;
    justify-content: center;
    align-items: center;
+   text-align: center;
 }
 .board{
     display: grid;
@@ -89,7 +90,7 @@ body{
         font-size: 50px;
     }
     .bellring{
-        font-weight: 100;
+        font-weight: 70;
     }
 }
 .cell.disabled{
