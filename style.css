@@ -89,7 +89,7 @@ body{
         font-size: 50px;
     }
     .bellring{
-        height: 20px;
+        font-weight: 100;
     }
 }
 .cell.disabled{
@@ -102,7 +102,7 @@ background:black;
     width: 100%;
     padding: 8px 12px;
     font-size: 40px;
-    font-weight: 600;
+    font-weight: 400;
     height: 40px;
     display: none;
   text-align: center;
