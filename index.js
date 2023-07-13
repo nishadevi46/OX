@@ -3,7 +3,7 @@ const player1=document.querySelector('.player1');
 const player2=document.querySelector('.player2');
 const again=document.querySelector('.restart');
 const bellring=document.querySelector('.bellring');
-
+const gameoversound = new Audio('gameover.mp3');
 let alice='X';
 let bob='O';
 let turn=alice;
@@ -41,6 +41,7 @@ for(let i=0;i<conditions.length;i++){
         blocks[pos1].style.backgroundColor="#F7E8F6";
         blocks[pos2].style.backgroundColor="#F7E8F6";
         blocks[pos3].style.backgroundColor="#F7E8F6";
+        gameoversound.play();
            return true;
     }
 }
@@ -56,6 +57,7 @@ const handleclick=(e)=>{
             disableboard();
         }
         else if(checktie()){
+            gameoversound.play();
             showalert(`Tie Play Again`);
             disableboard();
         }
